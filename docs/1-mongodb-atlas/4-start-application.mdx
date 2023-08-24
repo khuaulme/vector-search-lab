@@ -1,0 +1,28 @@
+---
+sidebar_position: 4
+---
+
+# Start the application
+
+You might have noticed in the terminal window at the bottom that there is an error message.
+
+You will need to create a new file called `server/.env` and add the following line to it:
+
+```bash
+PORT=5050
+ATLAS_URI=<your MongoDB Atlas connection string>
+EMBEDDINGS_SOURCE=<openai or serverlessEndpoint>
+EMBEDDING_API_KEY=<your OpenAI API key if needed>
+```
+
+## Connect to MongoDB
+
+The first line is the port that the server will run on. You can keep this one to 5050 for now.
+
+The second line is the connection string to your MongoDB Atlas database. You can find this in the MongoDB Atlas dashboard under "Connect" and then "Connect your application". You can copy the connection string and replace `<password>` with the password you created earlier.
+
+## Choose an embeddings source
+
+The third line is the embeddings source. You can choose between `openai` and `serverlessEndpoint`.
+
+For now, you can set it to `serverlessEndpoint`. More on this topic later today.

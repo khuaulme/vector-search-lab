@@ -12,7 +12,7 @@ The aggregation pipeline is a framework for data aggregation modeled on the conc
 
 The most basic pipeline stages provide filters that operate like queries and document transformations that modify the form of the output document.
 
-Other pipeline operations provide tools for grouping and sorting documents by specific field or fields as well as tools for aggregating the contents of arrays, including arrays of documents. The pipeline provides efficient data aggregation using native operations within MongoDB, and is the preferred method for data aggregation in MongoDB.
+Other pipeline operations provide tools for grouping and sorting documents by specific fields as well as tools for aggregating the contents of arrays, including arrays of documents. The pipeline provides efficient data aggregation using native operations within MongoDB and is the preferred method for data aggregation in MongoDB.
 
 ## Pipeline Stages
 
@@ -44,7 +44,7 @@ Click on the _Aggregation_ tab at the top. This will bring you to the Aggregatio
 
 From here, let's create a simple aggregation that will return the title, and IMDB rating of the three longest comedies.
 
-First add a stage to `$match` all comedies.
+First, add a stage to `$match` all comedies.
 
 ```js
 {

@@ -35,7 +35,7 @@ Finally, it declares a collection called `collection` that you will use to query
 
 The first thing we'll do is query the data using a `find` method. This method will return all the documents in your collection matching the query.
 
-In your CodeSanbox, open the file `server/controllers/movies.mjs`, and look for the method `findMovies`.
+In your CodeSanbox, open the file `server/controllers/movies.mjs`, and look for the method `find`.
 
 This function will return the data from the database. It is currently returning an empty array.
 
@@ -52,7 +52,7 @@ Once you have the code, add it to your CodeSanbox.
 <div>
 
 ```js
-  async findMovies(searchTerm) {
+  async find(searchTerm) {
     const movies = await collection
       .find({ title: searchTerm }, {
         title: 1,

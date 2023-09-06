@@ -5,6 +5,8 @@
 
 // Name of the Github Repo
 const workshopName = 'vector-search-lab';
+// Change this if hosting outside mongodb-developer
+const organizationName = "joellord";
 
 // Main page config
 const title = "Join the Search Party!";
@@ -81,8 +83,8 @@ const config = {
   tagline: `${tagLine}`,
   url: `https://${workshopName}.github.io`,
   baseUrl: `/${workshopName}/`,
-  projectName: 'mongodb-developer.github.io',
-  organizationName: 'mongodb-developer',
+  projectName: `${organizationName}.github.io`,
+  organizationName: `${organizationName}`,
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -104,7 +106,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: `https://github.com/mongodb-developer/${workshopName}/blob/main`,
+          editUrl: `https://github.com/${organizationName}/${workshopName}/blob/main`,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -137,7 +139,7 @@ const config = {
         },
         items: [
           {
-            href: `https://github.com/mongodb-developer/${workshopName}`,
+            href: `https://github.com/${organizationName}/${workshopName}`,
             label: 'GitHub',
             position: 'right',
           },

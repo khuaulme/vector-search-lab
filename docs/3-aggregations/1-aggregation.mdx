@@ -52,7 +52,7 @@ First, add a stage to `$match` all comedies.
 }
 ```
 
-Next, use a `$sort` stage to sort the players by their overall score.
+Next, use a `$sort` stage to sort the movies by their runtime in descending order.
 
 ```js
 {
@@ -60,7 +60,7 @@ Next, use a `$sort` stage to sort the players by their overall score.
 }
 ```
 
-Use a `$limit` stage to limit the results to the top three players.
+Use a `$limit` stage to limit the results to the longest 3 movies.
 
 ```js
 3

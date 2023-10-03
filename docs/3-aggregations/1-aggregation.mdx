@@ -23,10 +23,11 @@ Pipeline stages can appear multiple times in the pipeline. Certain pipeline oper
 The documents travel through the stages in sequence. The first stage receives the entire input and the last stage emits the entire output as documents.
 
 Some of the common pipeline stages are:
-* `$match` - filters documents
-* `$group` - groups documents by some expression
-* `$sort` - sorts documents
-* `$limit` - limits the number of documents
+
+- `$match` - filters documents
+- `$group` - groups documents by some expression
+- `$sort` - sorts documents
+- `$limit` - limits the number of documents
 
 ## Building aggregation pipelines in the Atlas UI
 
@@ -48,22 +49,22 @@ First, add a stage to `$match` all comedies.
 
 ```js
 {
-  genres: "Comedy"
+  genres: "Comedy";
 }
 ```
 
-Next, use a `$sort` stage to sort the players by their overall score.
+Next, use a `$sort` stage to sort the movies by their runtime length in descending order.
 
 ```js
 {
-  runtime: -1
+  runtime: -1;
 }
 ```
 
-Use a `$limit` stage to limit the results to the top three players.
+Use a `$limit` stage to limit the results to the longest 3 movies.
 
 ```js
-3
+3;
 ```
 
 Finally, use a `$project` stage to return only the wanted fields.
